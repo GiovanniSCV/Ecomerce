@@ -3,25 +3,113 @@
     padding: 0;
     box-sizing: border-box;
 }
-.menu{
-    background: #507AFF;
+
+body{
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+}
+header{
+    background: #0769e9;
+    height: 80px;
+    position: fixed;
     width: 100%;
-    width: 30px;
+    top: 0;
+    left: 0;
 }
+.logo{
+    text-decoration: none;
+    font-size: 40px;
+    padding: 0 40px;
+    line-height: 80px;
+    
+}
+/*nav*/
+.nav_menu{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;/*Sale de BOOBSTRAP*/
+    margin: 0 auto;
+}
+.nav_link{
+    color: #fff;
+    text-decoration: none;
+}
+/*nav_menu de los LI*/
+.nav__menu-li{
+    display: flex;
+    list-style: none;
+    margin-right: 40px;
 
-.nav{
-    width: 50%;
-    padding: 10px 30px 15px;
 }
-/*.contenedor_li{
-    display: flexbox;
-    flex-wrap: wrap;
-}
-
-li{
-    float: right;
-    width: 100px;
-    height: 20px;
+.nav__menu-item{
     font-size: 18px;
-    background: #3364FF;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;/*Para evitar que al reducir se quite */
+}
+.nav__menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.nav__menu-link:hover{
+    background: #034574;
+    border-radius: 10px;
+}
+.nav_togle{
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+@media (max-width: 768px){/*Media query*/
+    body{
+        padding-top: 70px;
+    }
+    header{
+        height: 60px;
+    }
+    .logo{
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    /*nav_menu de los LI*/
+    .nav__menu-li{
+        flex-direction: column;
+        margin-right: 20px;
+        background: #2c3e50;
+        position: fixed;
+        
+        top: 60px;
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        overflow-y: auto;
+        height: calc(100% - 60px);
+        
+        left: 100%;
+        transition: left 0.3s;
+    }
+    .nav__menu-item{
+        line-height: 60px;
+    }
+    
+    .nav__menu-link:hover{
+        background: none;
+        color: #83c5f7;
+    }
+    .nav_togle{
+        cursor: pointer;
+        display: block;
+    }
+    .nav_menu-visible{
+        
+        left: 0;
+    }
 }
